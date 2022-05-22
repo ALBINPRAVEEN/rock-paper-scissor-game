@@ -1,0 +1,130 @@
+body {
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: whitesmoke;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  letter-spacing: 0.15em;
+}
+#gameBoard {
+  margin: auto;
+  margin-top: 5em;
+  display: grid;
+  width: 300px;
+  height: 250px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 0.5fr 1fr;
+  grid-template-areas:
+    "pos1 n pos2"
+    "user s house"
+    "a pos3 d";
+}
+.initialBoard {
+  background-image: url(./images/bg-triangle.svg);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.mainText {
+  text-transform: uppercase;
+  letter-spacing: normal;
+  font-size: 0.8em;
+  text-align: center;
+  margin-top: 1.2em;
+}
+.selection {
+  background: #fff;
+  border-radius: 50%;
+  border: solid 10px black;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  color: transparent;
+  box-shadow: 0 0 4px hsl(237, 49%, 15%);
+}
+#rock {
+  grid-area: pos3;
+  border-color: hsl(349, 70%, 56%);
+  background-image: url(./images/icon-rock.svg);
+}
+#paper {
+  grid-area: pos1;
+  border-color: hsl(230, 89%, 65%);
+  background-image: url(./images/icon-paper.svg);
+}
+#scissors {
+  grid-area: pos2;
+  border-color: hsl(40, 84%, 53%);
+  background-image: url(./images/icon-scissors.svg);
+}
+.selection:active {
+  box-shadow: 0 0 1px white;
+}
+header {
+  display: flex;
+  width: calc(100% - 6em);
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em;
+  padding: 1em;
+  border: solid 2px hsl(217, 16%, 45%);
+  border-radius: 0.5em;
+}
+#logo {
+  height: 50px;
+}
+#logo img {
+  max-height: 100%;
+  max-width: auto;
+}
+#score {
+  background-color: whitesmoke;
+  color: hsl(229, 25%, 31%);
+  height: 75px;
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25em;
+}
+#scoreCounter {
+  font-size: 40px;
+  font-weight: 700;
+}
+#scoreTitle {
+  font-size: 0.75em;
+  color: hsl(229, 64%, 46%);
+}
+#result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#result .mainText {
+  font-size: 60px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+#result .playAgain {
+  width: 250px;
+  padding: 1em;
+  text-transform: uppercase;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.5em;
+  color: hsl(229, 25%, 31%);
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  margin-top: 1em;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.attribution {
+  position: fixed;
+  bottom: 0;
+  
+}

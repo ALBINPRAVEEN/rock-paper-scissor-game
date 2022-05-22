@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Rock, Paper, Scissors</title>
+
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <div id="logo"><img src="./images/logo.svg" alt="logo" /></div>
+        <div id="score">
+          <div id="scoreTitle">SCORE</div>
+          <div id="scoreCounter"></div>
+        </div>
+      </header>
+      <div id="gameBoard" class="initialBoard">
+        <button class="selection" id="rock">Rock</button>
+        <button class="selection" id="paper">Paper</button>
+        <button class="selection" id="scissors">Scissors</button>
+      </div>
+      <div id="result"></div>
+    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="albinpraveen.ml" target="_blank"
+          >ALBINPRAVEEN</a
+        >.<br />
+        Coded by <a href="https://github.com/albinpraveen">ALBINPRAVEEN</a>.
+      </div>
+    </footer>
+    <script src="app/game.js" type="module"></script>
+  </body>
+</html>
